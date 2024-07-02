@@ -1,6 +1,11 @@
 # Helmet Safety Detection with YOLOv10 and Streamlit
 
-Đây là ứng dụng sử dụng mô hình YOLOv10 để phát hiện việc đội mũ bảo hộ. Ứng dụng được triển khai bằng Streamlit. Dự án này được lấy từ kho mã nguồn: [YOLOv10_Streamlit_Demo](https://github.com/wjnwjn59/YOLOv10_Streamlit_Demo).
+Đây là ứng dụng sử dụng mô hình YOLOv10 để phát hiện việc đội mũ bảo hộ. Ứng dụng được triển khai bằng Streamlit. Dự án này được lấy từ kho mã nguồn:
+- [YOLOv10](https://github.com/THU-MIG/yolov10/)
+- [YOLOv10_Streamlit_Demo](https://github.com/wjnwjn59/YOLOv10_Streamlit_Demo).
+
+Repo này cũng chứa mã nguồn của dự án Label Image, một công cụ để gán nhãn dữ liệu
+- [Label Image](https://github.com/HumanSignal/labelImg)
 
 ## Mục Lục
 
@@ -94,6 +99,7 @@ vì train fine-tuning cho pre-trained model Yolov10 với data safety Helmet c�
 ## Sonar Cloud 
 ### Sonar Cloud Project
 [Link to Sonar Cloud](https://sonarcloud.io/project/configuration?id=AIO-441-nguyen-thi-kim-tuyen_yoloV10)
+
 [New code Summaty]((https://sonarcloud.io/summary/new_code?id=AIO-441-nguyen-thi-kim-tuyen_yoloV10))
 ### SonarCloud Status
 
