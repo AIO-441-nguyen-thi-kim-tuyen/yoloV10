@@ -1,6 +1,11 @@
 # Helmet Safety Detection with YOLOv10 and Streamlit
 
-Đây là ứng dụng sử dụng mô hình YOLOv10 để phát hiện việc đội mũ bảo hộ. Ứng dụng được triển khai bằng Streamlit. Dự án này được lấy từ kho mã nguồn: [YOLOv10_Streamlit_Demo](https://github.com/wjnwjn59/YOLOv10_Streamlit_Demo).
+Đây là ứng dụng sử dụng mô hình YOLOv10 để phát hiện việc đội mũ bảo hộ. Ứng dụng được triển khai bằng Streamlit. Dự án này được lấy từ kho mã nguồn:
+- [YOLOv10](https://github.com/THU-MIG/yolov10/)
+- [YOLOv10_Streamlit_Demo](https://github.com/wjnwjn59/YOLOv10_Streamlit_Demo).
+
+Repo này cũng chứa mã nguồn của dự án Label Image, một công cụ để gán nhãn dữ liệu
+- [Label Image](https://github.com/HumanSignal/labelImg)
 
 ## Mục Lục
 
@@ -24,17 +29,11 @@
 - Streamlit  
 - Pytest & Pytest coverage
 - Coverage
-  
-Dùng cho models/yolo_v10 
-- Pytorch 
-- Opencv-python
-- ... (models/yolo_v10/requirements.txt)
-
-project này chạy streamlit với model đã fine-tuning nên ko cần install các gói sau 
-- onnx==1.14.0
-- onnxruntime==1.15.1
-- onnxsim==0.4.36
-- onnxruntime-gpu==1.18.0
+- models/yolo_v10/.
+  * PyTorch
+  * huggingface-hub
+  * Opencv-python
+  * ...
 
 ## Notebooks
 
@@ -61,18 +60,17 @@ vì train fine-tuning cho pre-trained model Yolov10 với data safety Helmet c�
     ```
 
 3. **Cài đặt các thư viện cần thiết:**
-   - Thư viện cần thiết cho module models/yolo_v10 (detect và load model fine-tuning)
-        ```bash
-        cd models/yolo_v10
-        pip install -r requirements.txt
-        pip install -e .
-        ```
-   - Thư viện cần thiết cho Streamlit app demo (thư mục gốc)
 
-       ```bash
+    ```bash
        pip install -r requirements.txt
-       ```
-
+    ```
+4. **Đường dẫn thư mục chứa model được cấu hình trong ```config/model_config.py```**
+    
+    ```python
+    class Detector_Config:
+        weight_path: str = 'models/yolo_v10/weights/best.pt'
+    ```
+    
 ## Chạy ứng dụng
 
 1. **Khởi động ứng dụng Streamlit:**
@@ -96,9 +94,12 @@ vì train fine-tuning cho pre-trained model Yolov10 với data safety Helmet c�
 
     Ứng dụng sẽ tự động phát hiện và hiển thị các vùng chứa người đội mũ bảo hộ trong ảnh đã tải lên. Kết quả sẽ được hiển thị trực tiếp trên ảnh.
 
+[<img src="images/streamlit_demo.png">]
+
 ## Sonar Cloud 
 ### Sonar Cloud Project
 [Link to Sonar Cloud](https://sonarcloud.io/project/configuration?id=AIO-441-nguyen-thi-kim-tuyen_yoloV10)
+
 [New code Summaty]((https://sonarcloud.io/summary/new_code?id=AIO-441-nguyen-thi-kim-tuyen_yoloV10))
 ### SonarCloud Status
 
