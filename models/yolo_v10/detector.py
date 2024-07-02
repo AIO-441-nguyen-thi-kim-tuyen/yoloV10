@@ -1,6 +1,6 @@
 import cv2
 from PIL import Image
-from models.yolo_v10.ultralytics import YOLOv10
+from ultralytics import YOLOv10
 
 
 def inference(image_path, weight_path):
