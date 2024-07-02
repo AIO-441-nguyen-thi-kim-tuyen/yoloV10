@@ -17,6 +17,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
+      - name: Install required libraries  for models/yolo_v10
+        run: pip install -r models/yolo_v10/requirements.txt
+
       - uses: streamlit/streamlit-app-action@v0.0.3
         with:
           app-path: safety_helmet_detection_app.py
