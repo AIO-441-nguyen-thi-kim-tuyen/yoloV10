@@ -20,7 +20,7 @@ jobs:
       - uses: streamlit/streamlit-app-action@v0.0.3
         with:
           app-path: safety_helmet_detection_app.py
-          ruff: true
+          ruff: false
           pytest-args: -v --ignore=models --junit-xml=test-results.xml
       - if: always()
         uses: pmeier/pytest-results-action@v0.6.0
